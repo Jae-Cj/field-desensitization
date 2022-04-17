@@ -18,19 +18,24 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.6.0</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+
+        <!--
+            这是我自己写的日志框架，真实项目中自行去掉，如果你想用的话也可以用，主要打印出输出请求和响应日志的，非常轻便，用AOP实现的
+            项目github首页：https://github.com/bnyte/forge
+         -->
+        <dependency>
+            <groupId>com.bnyte</groupId>
+            <artifactId>forge-spring-boot-starter</artifactId>
+            <version>1.0.8.1</version>
         </dependency>
     </dependencies>
 
@@ -46,6 +51,7 @@
         </dependencies>
     </dependencyManagement>
 
+    <!-- SpringBoot打包插件 -->
     <build>
         <plugins>
             <plugin>
